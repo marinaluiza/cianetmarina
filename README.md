@@ -7,21 +7,21 @@ Esse projeto foi criado para implementar um teste de processo seletivo
 
 1.1 Criar a imagem para o backend: 
 
-$ docker build -t back-image -f cianettest-back/Dockerfile .
+``$ docker build -t back-image -f cianettest-back/Dockerfile .``
 
 1.2 Criar a imagem para o frontend: 
 
-$ docker build -t front-image -f cianettest-front/Dockerfile .
+``$ docker build -t front-image -f cianettest-front/Dockerfile .``
 
 2 Rodar os containers com as imagens recém criadas tanto para o frontend quanto backend
 
 2.1 Container do backend
 
-$ docker run -p 8080:8080 -rm back-image
+``$ docker run -p 8080:8080 -rm back-image``
 
 2.2 Container do frontend
 
-$ docker run -v ${PWD}:/app -v /app/node_modules -p 3001:3000 --rm front-image
+``$ docker run -v ${PWD}:/app -v /app/node_modules -p 3001:3000 --rm front-image``
 
 Pronto, as máquinas devem estar rodando devidamente cada uma dentro do seu container. Para rodar localmente, o frontend
 chama a API rest com o IP local (http://localhost:8080).
