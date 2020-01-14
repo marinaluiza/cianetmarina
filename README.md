@@ -7,19 +7,19 @@ Esse projeto foi criado para implementar um teste de processo seletivo
 
 1.1 Criar a imagem para o backend: 
 
-``$ docker build -t back-image -f cianettest-back/Dockerfile .``
+``$ docker build -t back-image -f cianettest-back/Dockerfile cianettest-back``
 
 1.2 Criar a imagem para o frontend: 
 
-``$ docker build -t front-image -f cianettest-front/Dockerfile .``
+``$ docker build -t front-image -f cianettest-front/Dockerfile cianettest-front``
 
 2 Rodar os containers com as imagens recém criadas tanto para o frontend quanto backend
 
 2.1 Container do backend
 
-``$ docker run -p 8080:8080 -rm back-image``
+``$ docker run -p 8080:8080 --rm back-image``
 
-2.2 Container do frontend
+2.2 Container do frontend (é preciso estar na pasta cianetmarina/cianettest-front)
 
 ``$ docker run -v ${PWD}:/app -v /app/node_modules -p 3001:3000 --rm front-image``
 
