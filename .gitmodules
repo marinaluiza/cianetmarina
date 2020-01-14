@@ -1,0 +1,6 @@
+[submodule "cianettest-front"]
+	path = cianettest-front
+	url = https://github.com/marinaluiza/cianettest-front.git
+[submodule "cianettest-back"]
+	path = cianettest-back
+	url = https://github.com/marinaluiza/cianettest-back.git
